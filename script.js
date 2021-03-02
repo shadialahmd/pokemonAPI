@@ -4,7 +4,7 @@
 
 
 
-    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=99")
+    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=100")
     .then(result => {
 
       return result.json();
