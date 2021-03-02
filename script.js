@@ -10,8 +10,9 @@
     })
     .then(r =>{
 
+        console.log(r["results"].length);
       
-      for(var i=0 ;i<20;i++){
+      for(var i=0 ;i<r["results"].length;i++){
 
         var div=document.createElement("DIV");
        div.innerHTML=r["results"][i]["name"];
