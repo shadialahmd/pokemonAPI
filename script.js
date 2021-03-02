@@ -10,15 +10,18 @@
     })
     .then(r =>{
 
-      for(var i=0 ;i<21;i++){
+      
+      for(var i=0 ;i<20;i++){
 
         var div=document.createElement("DIV");
        div.innerHTML=r["results"][i]["name"];
        document.body.appendChild(div);
+       
       
       }
-      
       document.getElementById("demo").innerHTML=JSON.stringify(r);
-      console.log(r["results"]);
+      console.log(r);
+      
+
     }) //console.log(r['results']));
 
