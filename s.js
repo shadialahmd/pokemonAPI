@@ -16,7 +16,7 @@ const colors = {
     ghost: '#db93de'
 }
 
-pokemon_count = 110;
+pokemon_count = 5;
 
 const fetchPokemons = async () => {
     console.log("start fetching");
@@ -33,10 +33,12 @@ const getPokemon = async (id) => {
     var div=document.createElement("DIV");
     div.className="dd";
     var img=document.createElement("IMG");
-    div.innerHTML=id+' '+data['name'];
+   // div.innerHTML=id+' '+data['name'];
+    div.innerHTML=`<div id="name">${data['name']}</div>`;
+
     div.style.backgroundColor=colors[data['types'][0]['type']['name']]
     div.innerHTML+=`<img style="width:150px" src=https://pokeres.bastionbot.org/images/pokemon/${id}.png>`;
-  
+   
     // img.src='https://pokeres.bastionbot.org/images/pokemon/'+id+'.png';
     document.body.appendChild(div);
    // document.body.appendChild(img);
