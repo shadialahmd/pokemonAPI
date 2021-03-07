@@ -1,32 +1,17 @@
+// program to display time every 3 seconds
+function showTime() {
 
+    // return new date and time
+    let dateTime= new Date();
 
+    // returns the current local time
+    let time = dateTime.toLocaleTimeString();
 
-async function api(){
+    console.log(time)
 
-  
-    
-
-    let response = fetch('https://pokeapi.co/api/v2/pokemon/1')
-    let data =  await api2()
-    let data2 =  response.json()   
-    
-    console.log('api1');
-    console.log(data2)
-
-
+    // display the time after 3 seconds
+     setTimeout(showTime, 3000);
 }
 
-
-function api2(){
-
-    for(x=0;x<5;x++){
-
-        console.log(x);
-    }
-   
-
-
-}
-//api2()
-
-api();
+// calling the function
+showTime();
