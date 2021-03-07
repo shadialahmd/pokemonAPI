@@ -12,10 +12,11 @@ const colors = {
 	psychic: '#eaeda1',
 	flying: '#F5F5F5',
 	fighting: '#E6E0D4',
-	normal: '#F5F5F5'
+    normal: '#F5F5F5',
+    ghost: '#db93de'
 }
 
-pokemon_count = 10;
+pokemon_count = 110;
 
 const fetchPokemons = async () => {
     console.log("start fetching");
@@ -30,9 +31,11 @@ const getPokemon = async (id) => {
     const res = await fetch(url)
     const data = await res.json()
     var div=document.createElement("DIV");
+    div.className="dd";
     var img=document.createElement("IMG");
     div.innerHTML=id+' '+data['name'];
-    div.innerHTML+=`<img src=https://pokeres.bastionbot.org/images/pokemon/${id}.png>`;
+    div.style.backgroundColor=colors[data['types'][0]['type']['name']]
+    div.innerHTML+=`<img style="width:150px" src=https://pokeres.bastionbot.org/images/pokemon/${id}.png>`;
   
     // img.src='https://pokeres.bastionbot.org/images/pokemon/'+id+'.png';
     document.body.appendChild(div);
