@@ -16,7 +16,7 @@ const colors = {
     ghost: '#db93de'
 }
 
-pokemon_count = 100;
+pokemon_count = 1000;
 
 const fetchPokemons = async () => {
     console.log("start fetching");
@@ -36,7 +36,7 @@ const getPokemon = async (id) => {
     div.innerHTML=`<div id="name">${data['name']}</div>`;
 
     div.style.backgroundColor=colors[data['types'][0]['type']['name']]
-    div.innerHTML+=`<div class="img-container"><img style="width:150px" src=https://pokeres.bastionbot.org/images/pokemon/${id}.png></div>`;
+    div.innerHTML+=`<div class="img-container"><img style="width:150px" src=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png></div>`;
    
     div.innerHTML+=`<div id="num"> # ${id}</div>`;
     div.innerHTML+=`<div id="type">Type : ${data['types'][0]['type']['name']}</div>`;
